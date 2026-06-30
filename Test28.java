@@ -15,6 +15,12 @@ public class Test28 {
        store.remove(20);
        System.out.println(store);
 
+       System.out.println(store.contains(10));
+
+       store.clear();
+
+       System.out.println(store);
+
 
     }
 
