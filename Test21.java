@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Test21 {
+    public static void main (String[] args){
+
+        HashSet<String> store = new HashSet<>();
+
+        store.add("BMW");
+        store.add("FORD");
+        store.add("JACKWOR");
+        store.add("AUDIO");
+        store.add("FORD");
+
+        store.remove("FORD");  //do not use store.remove(1); in hashset.
+
+        System.out.println(store);
+    }
+}
