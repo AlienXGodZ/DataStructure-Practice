@@ -1,11 +1,11 @@
 import java.util.*;
 
-class cars implements Comparable<Reverse>{
+class Reverse implements Comparable<Reverse>{
 
     String name;
     String model;
 
-    cars(String name, String model){
+    Reverse(String name, String model){
         this.name = name;
         this.model = model;
     }
@@ -20,7 +20,7 @@ class cars implements Comparable<Reverse>{
     }
 
 }
-public class Test78 {
+public class Test81 {
     public static void main(String[] args){
 
         ArrayList<Reverse> store = new ArrayList<>();
@@ -29,7 +29,7 @@ public class Test78 {
         store.add(new Reverse("Audio","A4 Model"));
         store.add(new Reverse("Tata","No damage"));
 
-        Collections.sort(store);
+        Collections.reverse(store);
 
         System.out.println(store);
 

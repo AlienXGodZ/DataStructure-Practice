@@ -1,6 +1,6 @@
 import java.util.*;
 
- class Books implements Comparable<cars>{
+ class Books implements Comparable<Reverse>{
 
      String name;
      String title;
@@ -10,7 +10,7 @@ import java.util.*;
          this.title = title;
      }
 
-     public int compareTo(cars others){
+     public int compareTo(Reverse others){
          return this.title.compareTo(others.model);
      }
 
@@ -23,11 +23,11 @@ import java.util.*;
 public class Test77 {
     public static void main(String[] args){
 
-        ArrayList<cars> store = new ArrayList<>();
+        ArrayList<Reverse> store = new ArrayList<>();
 
-        store.add(new cars("The Chair","Chapter1"));
-        store.add(new cars("The Ghost","Chapter 2"));
-        store.add(new cars("The bleach","Chapter 3"));
+        store.add(new Reverse("The Chair","Chapter1"));
+        store.add(new Reverse("The Ghost","Chapter 2"));
+        store.add(new Reverse("The bleach","Chapter 3"));
 
         Collections.sort(store);
 
