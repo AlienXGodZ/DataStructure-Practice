@@ -16,6 +16,8 @@ public class Test69 {
 
         List<String> unModified = Collections.unmodifiableList(store);
 
+        System.out.println(unModified.contains("Bala"));
+
         System.out.println(unModified);
 
         System.out.println(unModified.get(1)); // its is work because it only read and only work get method.
@@ -24,7 +26,6 @@ public class Test69 {
 
         System.out.println(unModified.remove(1)); // does not remove because it is unmodified
 
-        System.out.println(unModified.contains("Bala"));
 
     }
 }
