@@ -1,25 +1,25 @@
 import java.util.*;
 
-  class employe implements Comparable<product>{
+class product implements Comparable<product>{
 
-      int salary;
+    int price;
 
-      employe(int salary){
-          this.salary = salary;
-      }
+    product(int price){
+        this.price = price;
+    }
 
-      public int compareTo(product other){
-          return Integer.compare(this.salary, other.price);
-      }
+    public int compareTo(product other){
+        return Integer.compare(this.price, other.price);
+    }
 
-      public String toString() {
+    public String toString() {
 
-          return String.valueOf(salary);
-      }
-  }
+        return String.valueOf(price);
+    }
+}
 
 
-public class Test75 {
+public class Test76 {
     public static void main(String[] args){
 
         ArrayList<product> store = new ArrayList<>();
