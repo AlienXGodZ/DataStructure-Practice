@@ -72,6 +72,28 @@ import java.util.*;
               System.out.println("\nQueue is not Empty");
           }
      }
+
+     void sortname(){
+
+          System.out.println();
+
+          List<queuepatient> sorted = new ArrayList<>(store);
+
+          Collections.sort(sorted,new Comparator<queuepatient>(){
+
+              public int compare(queuepatient s1, queuepatient s2){
+
+                  return s1.name.compareTo(s2.name);
+              }
+
+
+          });
+
+          for(queuepatient i : sorted){
+
+              System.out.println(i);
+          }
+     }
    }
 
 public class Test109 {
@@ -95,6 +117,8 @@ public class Test109 {
         s.checkEmpty();
 
         s.display();
+
+        s.sortname();
 
     }
 }
