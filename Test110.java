@@ -72,6 +72,29 @@ import java.util.*;
              System.out.println("\nHistory is Deleted");
          }
      }
+
+     void sortWebsitename(){
+
+         System.out.println();
+
+         List<website> list = new ArrayList<>(store);
+
+         Collections.sort(list, new Comparator<website>() {
+
+            public int compare(website s1 , website s2){
+
+                return s1.websitename.compareTo(s2.websitename);
+            }
+         });
+
+         for(website i : list){
+
+             System.out.println(i);
+
+         }
+
+
+     }
   }
 
 public class Test110 {
@@ -97,9 +120,13 @@ public class Test110 {
 
         s.displayHistory();
 
+        s.sortWebsitename();
+
         s.clearHistory();
 
         s.isHistoryEmpty();
+
+
 
 
     }
