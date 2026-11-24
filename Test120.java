@@ -1,91 +1,73 @@
-public class Test120{
 
-    static class Node{
+public class Test120 {
+
+    static class Node {
 
         int data;
         Node next;
 
-        Node(int data){
-
+        Node(int data) {
             this.data = data;
             this.next = null;
-
         }
-
     }
 
-    static class LinkedList{
+    static class LinkedList {
 
         Node head;
 
+        void insertAtBeginning(int data) {
 
-        void insertatBeginning(int data){
+            Node newNode = new Node(data);
 
-        Node newnode = new Node(data);
+            newNode.next = head;
 
-        newnode.next = head;
-
-        head = newnode;
-
-
-    }
-
-      void insertatending(int data){
-
-        Node newnode = new Node(data);
-
-        if(head == null){
-
-            head = newnode;
-
-            return;
-
+            head = newNode;
         }
 
-        Node temp = head;
+        void insertAtEnd(int data) {
 
-        while(temp.next != null){
+            Node newNode = new Node(data);
 
-           temp = temp.next;
-
-        }
-
-        temp.next = newnode;
-
-        }
-
-        void display(){
+            if (head == null) {
+                head = newNode;
+                return;
+            }
 
             Node temp = head;
 
-            while(temp != null){
-
-                System.out.print(temp.data + " --->");
-
+            while (temp.next != null) {
                 temp = temp.next;
-
             }
 
-            System.out.print("null");
-
+            temp.next = newNode;
         }
 
+        void display() {
 
+            Node temp = head;
+
+            while (temp != null) {
+
+                System.out.print(temp.data + " -> ");
+
+                temp = temp.next;
+            }
+
+            System.out.println("null");
+        }
     }
 
+    public static void main(String[] args) {
 
-    public static void main(String[] args){
+        LinkedList list = new LinkedList();
 
-        LinkedList store = new LinkedList();
+        list.insertAtEnd(10);
+        list.insertAtEnd(20);
+        list.insertAtEnd(30);
 
-        store.insertatending(1);
-        store.insertatending(2);
-        store.insertatending(3);
-        store.insertatBeginning(5);
+        list.insertAtBeginning(5);
 
-        store.display();
-
-
-
+        list.display();
     }
 }
