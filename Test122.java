@@ -126,6 +126,60 @@ public class Test122 {
 
         }
 
+        void nthnodefromtheEnd(int n){
+
+            Node first = head;
+            Node second = head;
+
+            for(int i = 0; i < n; i++){
+
+                if(first == null){
+
+                    System.out.println("Invalid");
+                    return;
+
+                }
+
+                first = first.next;
+
+            }
+
+            while(first != null){
+
+                second = second.next;
+                first = first.next;
+
+            }
+
+            System.out.println(second.data);
+
+        }
+
+        void reverselinkedList(){
+
+            Node prev = null;
+
+            Node current = head;
+
+            Node next = null;
+
+            while(current != null){
+
+                next = current.next;
+
+                current.next = prev;
+
+                prev = current;
+
+                current = next;
+
+
+            }
+
+            head = prev;
+
+        }
+
     }
 
 
@@ -137,11 +191,19 @@ public class Test122 {
         store.insertatbeginning(2);
         store.insertatbeginning(1);
 
+        store.display();
+
         store.findlengthofLinkedList();
 
         store.search(5);
 
         store.middlenode();
+
+        store.nthnodefromtheEnd(1);
+
+        store.reverselinkedList();
+
+        store.display();
 
 
     }
